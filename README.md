@@ -1,1 +1,1 @@
-# paint-jam-2021 entry
+# Paint Jam-2021 Entry
