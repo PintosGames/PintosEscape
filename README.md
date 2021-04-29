@@ -1,1 +1,1 @@
-# Paint Jam-2021 Entry
+# Paint Jam 2021 Entry
