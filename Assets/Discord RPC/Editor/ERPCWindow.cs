@@ -147,7 +147,7 @@ namespace ERPC
                 ButtonErrors(ERPC.firstButtonLabel, ERPC.firstButtonUrl);
             }
 
-            GUILayout.Space(40);
+            GUILayout.Space(20);
 
             #endregion
 

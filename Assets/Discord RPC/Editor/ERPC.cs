@@ -70,15 +70,14 @@ namespace ERPC
 
             start = GetTimeStamp();
 
-            CreateClient();
+            if (!EditorApplication.isPlaying) CreateClient();
             ERPCSettings.GetSettings();
-            if (enableOnStartup) enabled = true;
-            if (enabled) Initialize(); 
+            if (enableOnStartup) enabled = true;; 
         }
 
         static void Update()
         {
-            if (!EditorApplication.isPlaying == false && !client.IsInitialized && enabled) Initialize();
+            if (!EditorApplication.isPlaying && !client.IsInitialized && enabled) Initialize();
 
             if (sceneName != SceneManager.GetActiveScene().name)
             {
@@ -100,7 +99,6 @@ namespace ERPC
                 lastEdit = 0f;
             }
 
-            if (enabled && client.IsDisposed) Initialize();
             if (!enabled && !client.IsDisposed) Dispose();
         }
 
