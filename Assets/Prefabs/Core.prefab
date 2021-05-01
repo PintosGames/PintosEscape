@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1001190711578272201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001190711578272207}
+  - component: {fileID: 1001190711578272206}
+  - component: {fileID: 1001190711578272200}
+  - component: {fileID: 7022044575241350586}
+  - component: {fileID: 5586319149985638734}
+  m_Layer: 0
+  m_Name: Core
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1001190711578272207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001190711578272201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.90334433, y: 0.015996037, z: -0.8782913}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1001190711578272206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001190711578272201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f4979f266d3c247b8dc887af6a48c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  discord: {fileID: 5586319149985638734}
+  save: {fileID: 1001190711578272200}
+  scene: {fileID: 7022044575241350586}
+--- !u!114 &1001190711578272200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001190711578272201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26075185c9fc68e44a57946844008d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFiles: []
+--- !u!114 &7022044575241350586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001190711578272201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c809c8536ada5a44db2e139905559bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBuildIndex: 0
+  scenes: []
+  sceneCount: 0
+--- !u!114 &5586319149985638734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001190711578272201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c0662f7bb58e7439856b9fa8414d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applicationID: 424087019149328395
+  steamID: 
+  targetPipe: -1
+  logLevel: 3
+  registerUriScheme: 0
+  active: 1
+  _currentUser:
+    _username: Clyde
+    _discriminator: 1
+    _snowflake: 0
+    _avatarHash: 
+    _avatar: {fileID: 0}
+    _cacheSize: 128
+    _cacheFormat: 0
+    _cdnEndpoint: cdn.discordapp.com
+    e_foldout: 1
+  _currentSubscription: 0
+  _currentPresence:
+    details: Playing a game
+    state: In Game
+    startTime:
+      timestamp: 0
+    endTime:
+      timestamp: 0
+    smallAsset:
+      image: 
+      tooltip: 
+      snowflake: 0
+    largeAsset:
+      image: 
+      tooltip: 
+      snowflake: 0
+    firstButton:
+      label: 
+      url: 
+    secondButton:
+      label: 
+      url: 
+    party:
+      identifer: 
+      size: 0
+      maxSize: 0
+    secrets:
+      joinSecret: 
+      spectateSecret: 
+  events:
+    OnReady:
+      m_PersistentCalls:
+        m_Calls: []
+    OnClose:
+      m_PersistentCalls:
+        m_Calls: []
+    OnError:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPresenceUpdate:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSubscribe:
+      m_PersistentCalls:
+        m_Calls: []
+    OnUnsubscribe:
+      m_PersistentCalls:
+        m_Calls: []
+    OnJoin:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSpectate:
+      m_PersistentCalls:
+        m_Calls: []
+    OnJoinRequest:
+      m_PersistentCalls:
+        m_Calls: []
+    OnConnectionEstablished:
+      m_PersistentCalls:
+        m_Calls: []
+    OnConnectionFailed:
+      m_PersistentCalls:
+        m_Calls: []

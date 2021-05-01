@@ -7,21 +7,8 @@ namespace Core.SaveSystem
 {
     public class SaveManager : MonoBehaviour
     {
-        public static SaveManager current;
 
         public List<SaveFiles> saveFiles;
-
-        public void Awake()
-        {
-            if(current == null)
-            {
-                current = this;
-            }
-            else
-            {
-                Destroy(this);
-            }
-        }
 
         public static void LoadGame(int saveFile)
         {
