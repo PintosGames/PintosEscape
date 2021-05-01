@@ -26,6 +26,7 @@ namespace Core.HealthSystem
         public void Damage()
         {
             if (health > 0) health--;
+            Debug.LogError("damage");
             if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
         }
 
