@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace Core.HealthSystem
 {
@@ -14,6 +15,7 @@ namespace Core.HealthSystem
         {
             this.maxHealth = maxHealth;
             health = maxHealth;
+            if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
         }
 
         public int GetHealth()
@@ -30,6 +32,7 @@ namespace Core.HealthSystem
         public void Heal()
         {
             if (health < maxHealth) health++;
+            Debug.Log("Healing");
             if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
         }
 
