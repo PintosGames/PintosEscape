@@ -10,11 +10,11 @@ public class PeaScript : MonoBehaviour
 
     float timer = 0;
 
-    private void Update()
+    private void Start()
     {
-        if (timer > 1) Shoot();
-
-        timer += 1f * Time.deltaTime;
+        
+        gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        
     }
 
     void Shoot()
