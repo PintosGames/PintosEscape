@@ -25,27 +25,12 @@ namespace Core
             {
                 Destroy(gameObject);
             }
-
-            if (sm.SceneManager.sceneCount == 1)
-            {
-                LoadScene(1);
-            }
-        }
-
-        private void Update()
-        {
-            sceneCount = sm.SceneManager.sceneCount;
         }
 
         public static void LoadScene(int sceneBuildIndex)
         {
             sm.SceneManager.sceneLoaded += OnLevelFinishedLoading;
-
-            var buildIndex = sm.SceneManager.GetActiveScene().buildIndex;
-
-            sm.SceneManager.UnloadSceneAsync(current.currentBuildIndex);
-
-            sm.SceneManager.LoadScene(sceneBuildIndex, sm.LoadSceneMode.Additive);
+            sm.SceneManager.LoadScene(sceneBuildIndex);
             current.currentBuildIndex = sceneBuildIndex;
 
             CoreManager.current.discord.SetPresence(new DiscordPresence()
@@ -62,10 +47,7 @@ namespace Core
 
         static void OnLevelFinishedLoading(sm.Scene scene, sm.LoadSceneMode mode)
         {
-            if (!current.scenes[current.currentBuildIndex].menuScene)
-            {
-                Debug.Log("Level Loaded");
-            }
+            // Stuff to do when scene has finished loading
 
             sm.SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         }
