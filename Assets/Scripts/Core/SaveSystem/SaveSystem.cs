@@ -10,7 +10,7 @@ namespace Core.SaveSystem
         {
             BinaryFormatter formatter = new BinaryFormatter();
 
-            string path = Application.persistentDataPath + "/" + SaveManager.current.saveFiles[saveFile].filepath;
+            string path = Application.persistentDataPath + "/" + CoreManager.current.save.saveFiles[saveFile].filepath;
             FileStream stream = new FileStream(path, FileMode.Create);
 
             SaveData data = new SaveData();
@@ -23,7 +23,7 @@ namespace Core.SaveSystem
 
         public static SaveData LoadPlayer(int saveFile)
         {
-            string path = Application.persistentDataPath + "/" + SaveManager.current.saveFiles[saveFile].filepath;
+            string path = Application.persistentDataPath + "/" + CoreManager.current.save.saveFiles[saveFile].filepath;
             if (File.Exists(path))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
