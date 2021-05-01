@@ -7,6 +7,8 @@ public class PlayerData : ScriptableObject
 {
     [Header("Basic")]
     public int maxHealth;
+    public float damageCooldown;
+    public float knockbackPower;
 
     [Header("Move State")]
     public float movementVelocity = 10f;

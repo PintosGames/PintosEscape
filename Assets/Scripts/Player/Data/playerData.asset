@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ca48738a7a0264884c833183f68271, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
+  maxHealth: 3
   movementVelocity: 10
   jumpVelocity: 15
   amountOfJumps: 1
