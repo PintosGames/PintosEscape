@@ -49,6 +49,8 @@ namespace Core
         {
             // Stuff to do when scene has finished loading
 
+            if (current.scenes[scene.buildIndex].gameScene) CoreManager.current.inGame = true;
+
             sm.SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         }
 
@@ -74,7 +76,7 @@ namespace Core
             [Header("Basic Info")]
             public string name;
             public int buildIndex;
-            public bool menuScene;
+            public bool gameScene;
 
             [Header("Discord Info")]
             public string details;

@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1001190711578272207}
   - component: {fileID: 1001190711578272206}
+  - component: {fileID: 2396357688429791465}
   - component: {fileID: 1001190711578272200}
   - component: {fileID: 7022044575241350586}
   - component: {fileID: 5586319149985638734}
   m_Layer: 0
   m_Name: Core
-  m_TagString: Untagged
+  m_TagString: Core
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,9 +47,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f4979f266d3c247b8dc887af6a48c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  inGame: 0
   discord: {fileID: 5586319149985638734}
   save: {fileID: 1001190711578272200}
   scene: {fileID: 7022044575241350586}
+--- !u!114 &2396357688429791465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001190711578272201}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0973fd4385dec40862c8388d50a167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &1001190711578272200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,7 +91,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentBuildIndex: 0
-  scenes: []
+  scenes:
+  - name: The Sink
+    buildIndex: 0
+    gameScene: 1
+    details: Exploring The Sink
+    state: 
+    largeKey: 
+    largeText: 
   sceneCount: 0
 --- !u!114 &5586319149985638734
 MonoBehaviour:
