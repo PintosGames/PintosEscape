@@ -11,11 +11,15 @@ namespace Core.HealthSystem
         public int health;
         public int maxHealth;
 
-        public HealthSystem(int maxHealth)
+        public float damageCooldown;
+
+        public float lastDamage;
+
+        public HealthSystem(int maxHealth, float damageCooldown)
         {
             this.maxHealth = maxHealth;
+            this.damageCooldown = damageCooldown;
             health = maxHealth;
-            if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
         }
 
         public int GetHealth()
@@ -25,15 +29,18 @@ namespace Core.HealthSystem
 
         public void Damage()
         {
-            if (health > 0) health--;
-            Debug.LogError("damage");
-            if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
+            if (Time.time > lastDamage + damageCooldown)
+            {
+                if (health > 0) health--;
+                if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
+                lastDamage = Time.time;
+                CoreManager.current.player.layer = LayerMask.NameToLayer("Damaged");
+            }
         }
 
         public void Heal()
         {
             if (health < maxHealth) health++;
-            Debug.Log("Healing");
             if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
         }
 
