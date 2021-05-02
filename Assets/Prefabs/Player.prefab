@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7185601164874403504}
+  - component: {fileID: 7185601164874403509}
   - component: {fileID: 7185601164874403505}
   - component: {fileID: 7185601164874403510}
   - component: {fileID: 7185601164874403511}
   - component: {fileID: 7185601164874403508}
-  - component: {fileID: 7185601164874403509}
   - component: {fileID: 7185601164874403514}
   - component: {fileID: 7185601164874403507}
   m_Layer: 6
@@ -38,6 +38,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7185601164874403509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185601164874403515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd00b097f45b343975279ec0b849f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 97ee086e618d50c4dbefcf4cd7135726, type: 2}
+  groundCheck: {fileID: 7185601165486030609}
 --- !u!212 &7185601164874403505
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -77,7 +91,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 221812e9160ec3e489855b3a47c4bf82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -184,25 +198,27 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0f9d76e3-7a4e-4d5f-851a-b6b267db8877
     m_ActionName: Gameplay/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7185601164874403514}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnInteractInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 602c59ca-5b65-4149-9d17-09632631ddfc
+    m_ActionName: Gameplay/Interact[/Keyboard/k]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7185601164874403509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7185601164874403515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68cd00b097f45b343975279ec0b849f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 97ee086e618d50c4dbefcf4cd7135726, type: 2}
-  groundCheck: {fileID: 7185601165486030609}
 --- !u!114 &7185601164874403514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7641726e322e6244e9f3c8975354ac13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractInput: 0
   inputHoldTime: 0.2
 --- !u!95 &7185601164874403507
 Animator:

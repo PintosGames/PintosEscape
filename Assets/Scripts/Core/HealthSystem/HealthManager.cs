@@ -25,6 +25,7 @@ namespace Core.HealthSystem
 
         private void Update()
         {
+            CoreManager.current.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
             if (Time.time > healthSystem.lastDamage + healthSystem.damageCooldown) CoreManager.current.player.gameObject.layer = LayerMask.NameToLayer("Player");
         }
 
