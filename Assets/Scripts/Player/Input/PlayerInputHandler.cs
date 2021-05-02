@@ -10,6 +10,7 @@ public class PlayerInputHandler : MonoBehaviour
     public int NormInputY { get; private set; }
     public bool JumpInput { get; private set; }
     public bool JumpInputStop { get; private set; }
+    public bool InteractInput;
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -45,6 +46,18 @@ public class PlayerInputHandler : MonoBehaviour
             JumpInputStop = true;
         }
         Debug.Log("move");
+    }
+
+    public void OnInteractInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            InteractInput = true;
+        }
+        if (context.canceled)
+        {
+            InteractInput = false;
+        }
     }
 
     public void UseJumpInput() => JumpInput = false;
