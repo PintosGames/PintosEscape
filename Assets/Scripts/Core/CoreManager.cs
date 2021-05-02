@@ -3,6 +3,7 @@ using UnityEditor;
 using sm = UnityEngine.SceneManagement;
 using Core.SaveSystem;
 using Core.HealthSystem;
+using Core.DialogueSystem;
 
 namespace Core
 {
@@ -21,6 +22,7 @@ namespace Core
         public SceneManager scene;
 
         public HealthManager health;
+        public DialogueManager dialogue;
 
         void Awake()
         {
