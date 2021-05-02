@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 561981794635181634}
   - component: {fileID: 2108759687836010142}
-  - component: {fileID: 6408054672140878159}
   - component: {fileID: 705596942469332143}
   - component: {fileID: 6806697070604756547}
   - component: {fileID: 5089378817618442473}
+  - component: {fileID: 6408054672140878159}
+  - component: {fileID: -2187316788822897448}
   m_Layer: 8
-  m_Name: Spider
+  m_Name: Gumbug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 660baa5a1bc9daf4495dfd2ffd903ea4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 346a182efac64264885c3b9d347c15df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,26 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6408054672140878159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975979706869912935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41716b05863098d4998def192fa5ebd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  wallCheckDistance: 0.4
-  facingDirection: 1
-  groundCheck: {fileID: 6779699152570455756}
-  groundCheckRadius: 0.3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!70 &705596942469332143
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -120,9 +101,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.49960724, y: 1}
-  m_Direction: 0
+  m_Offset: {x: 0.0045576426, y: -0.2256169}
+  m_Size: {x: 0.79033774, y: 0.5487663}
+  m_Direction: 1
 --- !u!50 &6806697070604756547
 Rigidbody2D:
   serializedVersion: 4
@@ -157,7 +138,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.29931527, y: 0}
+  m_Offset: {x: 0.32666278, y: -0.221059}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -168,8 +149,47 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17390978, y: 1}
+  m_Size: {x: 0.19214153, y: 0.557882}
   m_EdgeRadius: 0
+--- !u!114 &6408054672140878159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975979706869912935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41716b05863098d4998def192fa5ebd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  wallCheckDistance: 0.4
+  facingDirection: 1
+  groundCheck: {fileID: 6779699152570455756}
+  groundCheckRadius: 0.3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!95 &-2187316788822897448
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975979706869912935}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30668b096cd93e342b9eaf02e8b6e1cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6179892472079611058
 GameObject:
   m_ObjectHideFlags: 0

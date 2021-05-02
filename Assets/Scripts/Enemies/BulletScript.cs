@@ -6,8 +6,11 @@ public class BulletScript : MonoBehaviour
 {
     public float speed;
     public float dir;
+    public float lifeTime;
 
     private Rigidbody2D rb;
+
+    public int maxBounces;
 
     int bounces;
 
@@ -19,7 +22,9 @@ public class BulletScript : MonoBehaviour
 
         bounces = 0;
 
-        Destroy(gameObject, 10);
+        transform.localScale = new Vector2(0.5f, 0.5f);
+
+        Destroy(gameObject, lifeTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,7 +35,11 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (bounces == 1) Destroy(gameObject);
+        if (bounces >= maxBounces)
+        {
+            bounces = 0;
+            Destroy(gameObject);
+        }
         else bounces++;
     }
 }
