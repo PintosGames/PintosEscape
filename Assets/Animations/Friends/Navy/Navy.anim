@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Java
+  m_Name: Navy
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0.25
-      value: {fileID: 21300000, guid: 6549ff95af2292b48a1b0ec3ecd69993, type: 3}
+      value: {fileID: 21300000, guid: 173b589ffb6aa084885d987147fb0733, type: 3}
     - time: 0.5
-      value: {fileID: 21300000, guid: 0614b85adcd7951408c8666c27646140, type: 3}
+      value: {fileID: 21300000, guid: fee3efca07784314c87ff35726018ea6, type: 3}
     - time: 0.75
-      value: {fileID: 21300000, guid: d77788efabbe00a43bbdb5b11fd2f564, type: 3}
+      value: {fileID: 21300000, guid: 9deb52ac10dd4904996be088d0dd2b66, type: 3}
     - time: 1
-      value: {fileID: 21300000, guid: 9eae9f43094f7f547a79e66dcf4b9f4d, type: 3}
+      value: {fileID: 21300000, guid: e6549af2539b4884f8315aa050ac2c29, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 6549ff95af2292b48a1b0ec3ecd69993, type: 3}
-    - {fileID: 21300000, guid: 0614b85adcd7951408c8666c27646140, type: 3}
-    - {fileID: 21300000, guid: d77788efabbe00a43bbdb5b11fd2f564, type: 3}
-    - {fileID: 21300000, guid: 9eae9f43094f7f547a79e66dcf4b9f4d, type: 3}
+    - {fileID: 21300000, guid: 173b589ffb6aa084885d987147fb0733, type: 3}
+    - {fileID: 21300000, guid: fee3efca07784314c87ff35726018ea6, type: 3}
+    - {fileID: 21300000, guid: 9deb52ac10dd4904996be088d0dd2b66, type: 3}
+    - {fileID: 21300000, guid: e6549af2539b4884f8315aa050ac2c29, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

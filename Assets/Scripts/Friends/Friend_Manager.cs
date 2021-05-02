@@ -5,17 +5,11 @@ using System;
 
 public class Friend_Manager : MonoBehaviour
 {
-    public Friend_Class friend;
-
-    public Animator animator;
-
-    private void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        animator.Play(friend.name);
-    }
-
-    void Update()
-    {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }

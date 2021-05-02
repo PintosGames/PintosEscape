@@ -41,7 +41,7 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (bounces >= maxBounces)
+        if (bounces > maxBounces)
         {
             bounces = 0;
             Destroy(gameObject);

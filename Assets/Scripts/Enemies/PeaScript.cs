@@ -11,20 +11,29 @@ public class PeaScript : MonoBehaviour
 
     public Animator animator;
 
-    float timer = 0;
-
     public bool facingRight;
     public bool Attack { get; private set; }
 
     private void Start()
     {
-        if (transform.rotation.y == 0) facingRight = true;
-        else if (transform.rotation.y == 180) facingRight = false;
+        if (transform.rotation.y == 0)
+        {
+            facingRight = true;
+        }
+        else if (transform.rotation.y == 180)
+        {
+            facingRight = false;
+        }
 
         if (autoShoot) Attack = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player") Attack = true;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") Attack = true;
     }
@@ -42,8 +51,6 @@ public class PeaScript : MonoBehaviour
 
     void Shoot()
     {
-        timer = 0;
-
         GameObject curBul = Instantiate(bullet, nozzle.position, Quaternion.Euler(0, 0, 0), this.transform);
 
         if (facingRight) curBul.GetComponent<BulletScript>().facingDirection = 1;
