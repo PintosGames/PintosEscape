@@ -27,6 +27,8 @@ public class PlayerInputHandler : MonoBehaviour
 
         NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
         NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
+
+        Debug.Log("move");
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
@@ -42,6 +44,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             JumpInputStop = true;
         }
+        Debug.Log("move");
     }
 
     public void UseJumpInput() => JumpInput = false;
