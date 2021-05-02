@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public Vector3 point1;
-    public Vector3 point2;
+    public Transform point1;
+    public Transform point2;
 
     public float speed;
 
@@ -13,15 +13,15 @@ public class MovingPlatform : MonoBehaviour
 
     private void Start()
     {
-        transform.position = point1;
+        transform.position = point1.position;
     }
 
     private void Update()
     {
-        if (transform.position == point2) target = point1;
-        else if (transform.position == point1) target = point2;
+        if (transform.position == point2.position) target = point1.position;
+        else if (transform.position == point1.position) target = point2.position;
 
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime * Vector2.Distance(point1.position, point2.position));
     }
 
 }
