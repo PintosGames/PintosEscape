@@ -8,8 +8,6 @@ public class PeaScript : MonoBehaviour
 
     public Transform nozzle;
 
-    float timer = 0;
-
     private void Start()
     {
         
@@ -19,8 +17,6 @@ public class PeaScript : MonoBehaviour
 
     void Shoot()
     {
-        timer = 0;
-
         GameObject curBul = Instantiate(bullet, nozzle.position, Quaternion.Euler(0, 0, 0), this.transform);
 
         if (transform.localEulerAngles.y == 0) curBul.GetComponent<BulletScript>().dir = 1;

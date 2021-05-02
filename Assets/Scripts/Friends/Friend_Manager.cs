@@ -7,15 +7,15 @@ public class Friend_Manager : MonoBehaviour
 {
     public Friend_Class friend;
 
-    public Animation aniMan;
+    public Animator animator;
 
     private void Start()
     {
-        aniMan.clip = friend.animation;
+        animator.Play(friend.name);
     }
 
     void Update()
     {
-        if (aniMan.clip == null) aniMan.clip = friend.animation;
+        
     }
 }

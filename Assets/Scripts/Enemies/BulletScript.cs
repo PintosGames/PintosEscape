@@ -14,6 +14,8 @@ public class BulletScript : MonoBehaviour
 
     int bounces;
 
+    float randomRot;
+
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -25,6 +27,11 @@ public class BulletScript : MonoBehaviour
         transform.localScale = new Vector2(0.5f, 0.5f);
 
         Destroy(gameObject, lifeTime);
+    }
+
+    private void Update()
+    {
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
