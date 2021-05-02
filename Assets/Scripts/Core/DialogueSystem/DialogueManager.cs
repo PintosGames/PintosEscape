@@ -58,6 +58,8 @@ namespace Core.DialogueSystem
             dialogueBoxAnimator.SetBool("dialogueOpen", false);
 
             GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().enabled = true;
+
+            SceneManager.LoadNextScene();
         }
     }
 }

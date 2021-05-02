@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <ERPCSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <details>Paint Jam 2021 Entry</details>
-  <state>The Sink</state>
+<<<<<<< Updated upstream
+  <state>TheCabinet</state>
+=======
+  <state>The Grill</state>
+>>>>>>> Stashed changes
   <largeImageKey>ab</largeImageKey>
   <largeImageText>Paint Jam 2021 Entry</largeImageText>
   <smallImageKey>unity</smallImageKey>

@@ -25,6 +25,8 @@ namespace Core
             {
                 Destroy(gameObject);
             }
+            currentBuildIndex = sm.SceneManager.GetActiveScene().buildIndex;
+            if (current.scenes[currentBuildIndex].gameScene) CoreManager.current.inGame = true;
         }
 
         public static void LoadScene(int sceneBuildIndex)
@@ -50,6 +52,7 @@ namespace Core
             // Stuff to do when scene has finished loading
 
             if (current.scenes[scene.buildIndex].gameScene) CoreManager.current.inGame = true;
+            else CoreManager.current.inGame = false;
 
             sm.SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         }
