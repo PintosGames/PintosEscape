@@ -54,7 +54,7 @@ namespace Core
             sm.SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         }
 
-
+        public static void ReloadScene() => LoadScene(current.currentBuildIndex);
         public static void LoadNextScene() => LoadScene(current.currentBuildIndex + 1);
         public static void LoadPreviousScene() => LoadScene(current.currentBuildIndex - 1);
 

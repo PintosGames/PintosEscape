@@ -15,6 +15,8 @@ namespace Core
         public Player player;
         public bool inGame;
 
+        public Animator gameOverAnimator;
+
         [Header("Managers")]
         public DiscordManager discord;
 
@@ -34,8 +36,6 @@ namespace Core
             {
                 Destroy(this);
             }
-
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         }
 
         #region FUF
@@ -49,10 +49,17 @@ namespace Core
             if (player.FacingDirection == enemyFacingDirection) player.RB.AddForce(new Vector2(player.playerData.knockbackPower * player.FacingDirection, player.playerData.knockbackPower));
         }
 
+        public static void GameOver()
+        {
+            current.gameOverAnimator.SetBool("open", true);
+        }
+
         #endregion
 
         private void Update()
         {
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
 #if UNITY_EDITOR
             if (!EditorApplication.isPlaying)
             {

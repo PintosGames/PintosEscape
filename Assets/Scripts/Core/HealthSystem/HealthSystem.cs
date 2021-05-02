@@ -32,6 +32,7 @@ namespace Core.HealthSystem
             if (Time.time > lastDamage + damageCooldown)
             {
                 if (health > 0) health--;
+                if (health == 0) CoreManager.GameOver();
                 if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
                 lastDamage = Time.time;
                 CoreManager.current.player.gameObject.layer = LayerMask.NameToLayer("Damaged");

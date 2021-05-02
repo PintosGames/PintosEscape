@@ -39,7 +39,6 @@ namespace Core.DialogueSystem
             DisplayNextSentence(dialogue);
 
             GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().enabled = false;
-            Time.timeScale = 0f;
         }
 
         public void DisplayNextSentence(Dialogue dialogue)
@@ -59,7 +58,6 @@ namespace Core.DialogueSystem
             dialogueBoxAnimator.SetBool("dialogueOpen", false);
 
             GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().enabled = true;
-            Time.timeScale = 1f;
         }
     }
 }
