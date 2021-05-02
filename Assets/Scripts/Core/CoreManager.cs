@@ -13,7 +13,7 @@ namespace Core
         public static CoreManager current;
 
         public Player player;
-        public bool inGame;
+        public bool inGame = false;
 
         public Animator gameOverAnimator;
 
@@ -58,7 +58,6 @@ namespace Core
 
         private void Update()
         {
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
 #if UNITY_EDITOR
             if (!EditorApplication.isPlaying)
@@ -87,13 +86,14 @@ namespace Core
                 }
             }
 #endif
-            if (!inGame)
+            if (inGame)
             {
-                GetComponent<HealthSystem.HealthManager>().enabled = false;
+                GetComponent<HealthSystem.HealthManager>().enabled = true;
+                player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
             }
             else
             {
-                GetComponent<HealthSystem.HealthManager>().enabled = true;
+                GetComponent<HealthSystem.HealthManager>().enabled = false;
             }
         }
     }

@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &206486876
 RectTransform:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &656163810
 RectTransform:
   m_ObjectHideFlags: 0
@@ -390,7 +390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1941536319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  inGame: 1
+  inGame: 0
   gameOverAnimator: {fileID: 1114367152}
   discord: {fileID: 5586319149985638734}
   save: {fileID: 1001190711578272200}
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001190711578272201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0973fd4385dec40862c8388d50a167, type: 3}
   m_Name: 
@@ -608,8 +608,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentBuildIndex: 0
   scenes:
-  - name: The Sink
+  - name: Start
     buildIndex: 0
+    gameScene: 0
+    details: Exploring The Sink
+    state: 
+    largeKey: 
+    largeText: 
+  - name: BeginningCutscene
+    buildIndex: 1
+    gameScene: 0
+    details: Exploring BeginningCutscene
+    state: 
+    largeKey: 
+    largeText: 
+  - name: The Sink
+    buildIndex: 2
     gameScene: 1
     details: Exploring The Sink
     state: 

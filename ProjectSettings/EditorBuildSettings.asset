@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: d605c5d5432d3ba4bb00974fd35106b3
+  - enabled: 1
+    path: Assets/Scenes/BeginningCutscene.unity
+    guid: 783e653504b9a1248bc40e774ee9a1a6
+  - enabled: 1
     path: Assets/Scenes/The Sink.unity
     guid: 6d5033ac2b3796f47aaf2745dccaeb2c
   m_configObjects: {}
