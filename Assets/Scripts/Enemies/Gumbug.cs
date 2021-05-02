@@ -82,9 +82,12 @@ public class Gumbug : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        CoreManager.DamagePlayer();
-        CoreManager.KnockbackPlayer(facingDirection);
+        if (collision.gameObject.tag == "Player")
+        {
+            CoreManager.DamagePlayer();
+            CoreManager.KnockbackPlayer(facingDirection);
 
+        }
         Flip();
     }
 }

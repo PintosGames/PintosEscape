@@ -90,6 +90,7 @@ namespace Core
             {
                 GetComponent<HealthSystem.HealthManager>().enabled = true;
                 player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+                Debug.LogWarning("!");
             }
             else
             {

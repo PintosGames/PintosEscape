@@ -183,7 +183,6 @@ public class DiscordManager : MonoBehaviour
 
         //Assign the instance
         _instance = this;
-        DontDestroyOnLoad(this);
 
         //Prepare the logger
         DiscordRPC.Logging.ILogger logger = null;

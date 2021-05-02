@@ -377,32 +377,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 206486875, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
-      propertyPath: m_Name
-      value: Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 206486875, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 206486878, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8aab64f8049cd440a963310811b38b9,
-        type: 3}
-    - target: {fileID: 1941536318, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
-      propertyPath: m_Name
-      value: Restart
-      objectReference: {fileID: 0}
-    - target: {fileID: 1941536318, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1941536321, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a9559e766103ad640b6f2fc7a6a7dbf7,
-        type: 3}
     - target: {fileID: 1001190711578272201, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
         type: 3}
       propertyPath: m_Name
@@ -475,7 +449,7 @@ PrefabInstance:
     - target: {fileID: 7121055706437533112, guid: 63bb3084cc14ecb4fa1949658045809f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.890633
+      value: 31.881575
       objectReference: {fileID: 0}
     - target: {fileID: 7121055706754303180, guid: 63bb3084cc14ecb4fa1949658045809f,
         type: 3}
