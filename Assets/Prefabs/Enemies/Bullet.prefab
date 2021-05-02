@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3550035207287829651}
   - component: {fileID: 3550035207287829655}
   - component: {fileID: 1420332067713207905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
-  dir: 0
+  facingDirection: 0
   lifeTime: 20
   maxBounces: 10
 --- !u!50 &3550035207287829651
@@ -138,7 +138,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.02196747, y: 0.027958617}
   serializedVersion: 2
-  m_Radius: 0.1385351
+  m_Radius: 0.13
 --- !u!95 &1420332067713207905
 Animator:
   serializedVersion: 3

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public float speed;
-    public float dir;
+    public int facingDirection;
     public float lifeTime;
 
     private Rigidbody2D rb;
@@ -18,7 +18,7 @@ public class BulletScript : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
 
-        rb.AddForce(Vector2.right * speed * dir, ForceMode2D.Force);
+        rb.AddForce(Vector2.right * speed * facingDirection, ForceMode2D.Force);
 
         bounces = 0;
 
@@ -30,6 +30,7 @@ public class BulletScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Core.CoreManager.current.health.healthSystem.Damage();
+            Core.CoreManager.KnockbackPlayer(facingDirection);
             Destroy(gameObject);
         }
 

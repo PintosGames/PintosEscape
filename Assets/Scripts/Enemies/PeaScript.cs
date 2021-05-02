@@ -4,17 +4,41 @@ using UnityEngine;
 
 public class PeaScript : MonoBehaviour
 {
-    public GameObject bullet;
+    public bool autoShoot;
 
+    public GameObject bullet;
     public Transform nozzle;
+
+    public Animator animator;
 
     float timer = 0;
 
+    public bool facingRight;
+    public bool Attack { get; private set; }
+
     private void Start()
     {
-        
         gameObject.GetComponent<SpriteRenderer>().flipX = true;
-        
+        if (transform.rotation.x == 180) facingRight = true;
+        else if (transform.rotation.x == 0) facingRight = false;
+
+        if (autoShoot) Attack = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player") Attack = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && !autoShoot) Attack = false;
+    }
+
+    private void Update()
+    {
+        if (Attack) animator.SetBool("attack", true);
+        else animator.SetBool("attack", false);
     }
 
     void Shoot()
@@ -23,7 +47,12 @@ public class PeaScript : MonoBehaviour
 
         GameObject curBul = Instantiate(bullet, nozzle.position, Quaternion.Euler(0, 0, 0), this.transform);
 
-        if (transform.localEulerAngles.y == 0) curBul.GetComponent<BulletScript>().dir = 1;
-        else curBul.GetComponent<BulletScript>().dir = -1;
+        if (facingRight) curBul.GetComponent<BulletScript>().facingDirection = 1;
+        else curBul.GetComponent<BulletScript>().facingDirection = -1;
+    }
+
+    public void AttackFinished()
+    {
+        if (!autoShoot) Attack = false;
     }
 }
