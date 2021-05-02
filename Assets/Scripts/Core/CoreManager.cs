@@ -11,7 +11,7 @@ namespace Core
     {
         public static CoreManager current;
 
-        public GameObject player;
+        public Player player;
         public bool inGame;
 
         [Header("Managers")]
@@ -34,9 +34,18 @@ namespace Core
             }
         }
 
-        void Start()
+        #region FUF
+
+        public static void DamagePlayer() => current.health.healthSystem.Damage();
+        public static void HealPlayer() => current.health.healthSystem.Heal();
+        public static void KnockbackPlayer(int enemyFacingDirection)
         {
+            var player = current.player;
+            if (player.FacingDirection != enemyFacingDirection) player.RB.AddForce(new Vector2(-player.playerData.knockbackPower * player.FacingDirection, player.playerData.knockbackPower));
+            if (player.FacingDirection == enemyFacingDirection) player.RB.AddForce(new Vector2(player.playerData.knockbackPower * player.FacingDirection, player.playerData.knockbackPower));
         }
+
+        #endregion
 
         private void Update()
         {

@@ -25,7 +25,7 @@ namespace Core.HealthSystem
 
         private void Update()
         {
-            if (Time.time > healthSystem.lastDamage + healthSystem.damageCooldown) CoreManager.current.player.layer = LayerMask.NameToLayer("Player");
+            if (Time.time > healthSystem.lastDamage + healthSystem.damageCooldown) CoreManager.current.player.gameObject.layer = LayerMask.NameToLayer("Player");
         }
 
         private void HealthChange(object sender, System.EventArgs e)

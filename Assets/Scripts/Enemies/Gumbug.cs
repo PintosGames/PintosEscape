@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Core;
 
-public class Spider : MonoBehaviour
+public class Gumbug : MonoBehaviour
 {
     public float speed = 10f;
 
@@ -81,12 +82,8 @@ public class Spider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player") Core.CoreManager.current.health.healthSystem.Damage();
-
-        var player = Core.CoreManager.current.player.GetComponent<Player>();
-
-        if (collision.gameObject.GetComponent<Player>().FacingDirection != facingDirection) collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-player.playerData.knockbackPower, player.playerData.knockbackPower));
-        if (collision.gameObject.GetComponent<Player>().FacingDirection == facingDirection) collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(player.playerData.knockbackPower, player.playerData.knockbackPower));
+        CoreManager.DamagePlayer();
+        CoreManager.KnockbackPlayer(facingDirection);
 
         Flip();
     }

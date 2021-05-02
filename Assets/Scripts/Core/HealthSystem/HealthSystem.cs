@@ -34,7 +34,7 @@ namespace Core.HealthSystem
                 if (health > 0) health--;
                 if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
                 lastDamage = Time.time;
-                CoreManager.current.player.layer = LayerMask.NameToLayer("Damaged");
+                CoreManager.current.player.gameObject.layer = LayerMask.NameToLayer("Damaged");
             }
         }
 

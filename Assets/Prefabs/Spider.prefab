@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 705596942469332143}
   - component: {fileID: 6806697070604756547}
   - component: {fileID: 5089378817618442473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6779699152570455756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
