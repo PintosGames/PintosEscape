@@ -18,9 +18,8 @@ public class PeaScript : MonoBehaviour
 
     private void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().flipX = true;
-        if (transform.rotation.x == 180) facingRight = true;
-        else if (transform.rotation.x == 0) facingRight = false;
+        if (transform.rotation.y == 0) facingRight = true;
+        else if (transform.rotation.y == 180) facingRight = false;
 
         if (autoShoot) Attack = true;
     }
