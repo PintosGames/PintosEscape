@@ -5,6 +5,10 @@ using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour
 {
+    int jumped = 0;
+
+    public Transform spawnPoint;
+
     #region State Variables
     public PlayerStateMachine StateMachine { get; private set; }
 
@@ -61,6 +65,8 @@ public class Player : MonoBehaviour
         FacingDirection = 1;
 
         StateMachine.Initialize(IdleState);
+
+        transform.position = spawnPoint.position;
     }
 
     private void Update()
@@ -72,6 +78,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
+
+        if (CheckIfGrounded()) jumped = 0;
     }
     #endregion
 
@@ -139,4 +147,13 @@ public class Player : MonoBehaviour
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
     #endregion
+
+    public void Jump()
+    {
+        jumped++;
+
+        if (jumped == 0) FindObjectOfType<AudioManager>().Play("Jump");
+    }
+
+    
 }

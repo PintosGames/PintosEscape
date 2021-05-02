@@ -84,6 +84,7 @@ public class Gumbug : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Damage");
             CoreManager.DamagePlayer();
             CoreManager.KnockbackPlayer(facingDirection);
 

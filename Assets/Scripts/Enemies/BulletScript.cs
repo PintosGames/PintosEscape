@@ -18,6 +18,8 @@ public class BulletScript : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Bullet");
+
         rb = gameObject.GetComponent<Rigidbody2D>();
 
         rb.AddForce(Vector2.right * speed * facingDirection, ForceMode2D.Force);
@@ -36,6 +38,7 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Damage");
             Core.CoreManager.current.health.healthSystem.Damage();
             Core.CoreManager.KnockbackPlayer(facingDirection);
             Destroy(gameObject);

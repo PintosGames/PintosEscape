@@ -10,6 +10,15 @@ public class BeanFriend : DialogueTrigger
 
     public int facingDirection = -1;
 
+    public new AudioManager audio;
+
+    public bool lastBean;
+
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
         if ((CheckIfInFront() || CheckIfInBack()) && CoreManager.current.player.InputHandler.InteractInput)
@@ -18,6 +27,7 @@ public class BeanFriend : DialogueTrigger
 
             if (!CoreManager.current.dialogue.dialogueOpen)
             {
+                FindObjectOfType<AudioManager>().Play("Friend");
                 TriggerDialogue();
             }
             else
@@ -67,6 +77,14 @@ public class BeanFriend : DialogueTrigger
         {
             Gizmos.color = Color.white;
             Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + (playerCheckDistance * -facingDirection), transform.position.y, transform.position.z));
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (lastBean) Core.SceneManager.LoadScene(6);
         }
     }
 }
