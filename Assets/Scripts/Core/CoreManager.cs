@@ -32,6 +32,8 @@ namespace Core
             {
                 Destroy(this);
             }
+
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         }
 
         #region FUF
