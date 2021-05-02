@@ -22,8 +22,6 @@ public class BulletScript : MonoBehaviour
 
         bounces = 0;
 
-        transform.localScale = new Vector2(0.5f, 0.5f);
-
         Destroy(gameObject, lifeTime);
     }
 
