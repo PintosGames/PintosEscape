@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Core
+  - Health
   layers:
   - Default
   - TransparentFX
@@ -12,9 +13,9 @@ TagManager:
   - Ground
   - Water
   - UI
+  - Player
+  - Damaged
   - Enemies
-  - 
-  - 
   - 
   - 
   - 

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   maxHealth: 3
+  damageCooldown: 3
+  knockbackPower: 250
   movementVelocity: 10
   jumpVelocity: 15
   amountOfJumps: 1
