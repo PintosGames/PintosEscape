@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5198597353459406843}
   - component: {fileID: 5198597353459406842}
   - component: {fileID: 5198597353459406841}
+  - component: {fileID: 4226283996041641316}
   m_Layer: 0
   m_Name: Friend
   m_TagString: Untagged
@@ -54,6 +55,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   facingDirection: -1
+  audio: {fileID: 0}
+  lastBean: 0
 --- !u!212 &5198597353459406841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -105,3 +108,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!136 &4226283996041641316
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5198597353459406840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.29113388
+  m_Height: 1.2602602
+  m_Direction: 1
+  m_Center: {x: 0.052215576, y: -0.035869896, z: 0}

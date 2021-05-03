@@ -274,7 +274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -69, y: 62}
+  m_AnchoredPosition: {x: -169.6, y: 50}
   m_SizeDelta: {x: 75, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &366887581
@@ -378,10 +378,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1407226659, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 366887579}
     - target: {fileID: 1001190711578272201, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
         type: 3}
       propertyPath: m_Name
       value: Core
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001190711578272206, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
+        type: 3}
+      propertyPath: inGame
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1001190711578272207, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
         type: 3}
@@ -438,6 +447,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2396357688429791465, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
 --- !u!1001 &1707983975
@@ -450,7 +464,7 @@ PrefabInstance:
     - target: {fileID: 7121055706437533112, guid: 63bb3084cc14ecb4fa1949658045809f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.888832
+      value: 31.886238
       objectReference: {fileID: 0}
     - target: {fileID: 7121055706754303180, guid: 63bb3084cc14ecb4fa1949658045809f,
         type: 3}
@@ -624,7 +638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 361, y: 28}
+  m_AnchoredPosition: {x: -31.59999, y: 50}
   m_SizeDelta: {x: 75, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928878929
@@ -732,26 +746,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6840853545342038604, guid: 6b2cb8b4469685e48b9e9a7c45c3dbfa,
-        type: 3}
-      propertyPath: sounds.Array.data[0].volume
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6840853545342038604, guid: 6b2cb8b4469685e48b9e9a7c45c3dbfa,
-        type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6840853545342038604, guid: 6b2cb8b4469685e48b9e9a7c45c3dbfa,
-        type: 3}
-      propertyPath: sounds.Array.data[2].volume
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6840853545342038604, guid: 6b2cb8b4469685e48b9e9a7c45c3dbfa,
-        type: 3}
-      propertyPath: sounds.Array.data[3].volume
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7904583751915418279, guid: 6b2cb8b4469685e48b9e9a7c45c3dbfa,
         type: 3}

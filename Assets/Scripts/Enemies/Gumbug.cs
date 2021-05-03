@@ -9,6 +9,8 @@ public class Gumbug : MonoBehaviour
 
     public float wallCheckDistance = 3;
 
+    public Transform ledgeCheck;
+
     public int facingDirection = 1;
 
     public Transform groundCheck;
@@ -20,7 +22,7 @@ public class Gumbug : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        if (CheckIfTouchingWall() || (CheckIfNearLedge() && CheckIfGrounded())) Flip();
+        if (CheckIfTouchingWall() || (!CheckIfNotNearLedge() && CheckIfGrounded())) Flip();
     }
 
     public bool CheckIfGrounded()
@@ -33,9 +35,9 @@ public class Gumbug : MonoBehaviour
         return Physics2D.Raycast(transform.position, Vector2.right * facingDirection, wallCheckDistance, whatIsGround);
     }
 
-    public bool CheckIfNearLedge()
+    public bool CheckIfNotNearLedge()
     {
-        return !Physics2D.Raycast(new Vector2(transform.position.x + (wallCheckDistance * facingDirection), transform.position.y), Vector2.down * 1, whatIsGround);
+        return Physics2D.Raycast(ledgeCheck.position, Vector2.down, 1, whatIsGround);
     }
 
     public void Flip()
@@ -68,15 +70,15 @@ public class Gumbug : MonoBehaviour
             Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + (wallCheckDistance * facingDirection), transform.position.y));
         }
 
-        if (CheckIfNearLedge())
+        if (CheckIfNotNearLedge())
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawLine(new Vector2(transform.position.x + (wallCheckDistance * facingDirection), transform.position.y), new Vector2(transform.position.x + (wallCheckDistance * facingDirection), transform.position.y - 1));
+            Gizmos.DrawLine(ledgeCheck.position, new Vector2(ledgeCheck.position.x, ledgeCheck.position.y - 1));
         }
         else
         {
             Gizmos.color = Color.white;
-            Gizmos.DrawLine(new Vector2(transform.position.x + (wallCheckDistance * facingDirection), transform.position.y), new Vector2(transform.position.x + (wallCheckDistance * facingDirection), transform.position.y - 1));
+            Gizmos.DrawLine(ledgeCheck.position, new Vector2(ledgeCheck.position.x, ledgeCheck.position.y - 1));
         }
     }
 

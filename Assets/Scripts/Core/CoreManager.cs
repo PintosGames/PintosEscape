@@ -36,6 +36,16 @@ namespace Core
             {
                 Destroy(this);
             }
+
+            Debug.Log(sm.SceneManager.GetActiveScene().name + sm.SceneManager.GetActiveScene().buildIndex);
+
+            scene.currentBuildIndex = sm.SceneManager.GetActiveScene().buildIndex;
+
+            if (scene.scenes[scene.currentBuildIndex].gameScene)
+            {
+                current.inGame = true;
+                current.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            }
         }
 
         #region FUF
@@ -90,7 +100,6 @@ namespace Core
             {
                 GetComponent<HealthSystem.HealthManager>().enabled = true;
                 player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-                Debug.LogWarning("!");
             }
             else
             {

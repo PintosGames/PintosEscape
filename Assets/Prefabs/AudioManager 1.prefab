@@ -52,19 +52,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Song1
     clip: {fileID: 8300000, guid: 2f52fceda433d5a42a0ceca4e7d46b13, type: 3}
-    volume: 0.7
+    volume: 0.4
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Song2
     clip: {fileID: 8300000, guid: 4e811f97575c95247b33f7460c719653, type: 3}
-    volume: 0.7
+    volume: 0.4
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Credits
     clip: {fileID: 8300000, guid: b1e3713032c0a684d85ee35097a0cc58, type: 3}
-    volume: 0.7
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}

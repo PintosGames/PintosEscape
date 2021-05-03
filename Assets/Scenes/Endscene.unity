@@ -135,6 +135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Core
       objectReference: {fileID: 0}
+    - target: {fileID: 1001190711578272206, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
+        type: 3}
+      propertyPath: inGame
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1001190711578272207, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
         type: 3}
       propertyPath: m_RootOrder
@@ -190,6 +195,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2396357688429791465, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
 --- !u!1 &891610564
@@ -204,6 +214,7 @@ GameObject:
   - component: {fileID: 891610566}
   - component: {fileID: 891610565}
   - component: {fileID: 891610568}
+  - component: {fileID: 891610569}
   m_Layer: 0
   m_Name: Endscene
   m_TagString: Untagged
@@ -307,6 +318,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c10383a4c764744db00aa2d47511548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &891610569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891610564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b6f3fbc22f8184291d909f9ea75c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 0}
 --- !u!1 &1283549205
 GameObject:
   m_ObjectHideFlags: 0
