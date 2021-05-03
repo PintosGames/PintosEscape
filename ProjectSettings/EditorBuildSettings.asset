@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/The Grill.unity
     guid: 0099aefc2bc42984390652b3bf76faf9
+  - enabled: 1
+    path: Assets/Scenes/Endscene.unity
+    guid: 1a9ac07862db7264cadc15625242a024
   m_configObjects: {}
