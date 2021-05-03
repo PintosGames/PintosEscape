@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
+    public new AudioManager audio;
+
     public void Restart()
     {
         Core.SceneManager.ReloadScene();
@@ -12,6 +14,8 @@ public class GameOver : MonoBehaviour
 
     public void Exit()
     {
+        Destroy(audio.gameObject);
+
         Core.SceneManager.LoadScene(0);
         Core.CoreManager.current.gameOverAnimator.SetBool("open", false);
     }

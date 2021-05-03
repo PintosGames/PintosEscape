@@ -4,23 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Start.unity
-    guid: d605c5d5432d3ba4bb00974fd35106b3
-  - enabled: 1
-    path: Assets/Scenes/BeginningCutscene.unity
-    guid: 783e653504b9a1248bc40e774ee9a1a6
-  - enabled: 1
-    path: Assets/Scenes/The Sink.unity
-    guid: 6d5033ac2b3796f47aaf2745dccaeb2c
-  - enabled: 1
-    path: Assets/Scenes/TheCabinet.unity
-    guid: 2e4cff0ff32327242841616d6c04f892
-  - enabled: 1
-    path: Assets/Scenes/The Grill.unity
-    guid: 0099aefc2bc42984390652b3bf76faf9
-  - enabled: 1
-    path: Assets/Scenes/Endscene.unity
-    guid: 1a9ac07862db7264cadc15625242a024
+  m_Scenes: []
   m_configObjects: {}
