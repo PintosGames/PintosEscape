@@ -21,6 +21,7 @@ namespace Core.HealthSystem
             healthSystem = new HealthSystem(CoreManager.current.player.GetComponent<Player>().playerData.maxHealth, CoreManager.current.player.GetComponent<Player>().playerData.damageCooldown);
             healthSystem.OnHealthChanged += HealthChange;
             animator.SetInteger("health", healthSystem.GetHealth());
+            CoreManager.UpdatePresence();
         }
 
         private void Update()
@@ -32,6 +33,7 @@ namespace Core.HealthSystem
         private void HealthChange(object sender, System.EventArgs e)
         {
             animator.SetInteger("health", healthSystem.GetHealth());
+            CoreManager.UpdatePresence();
         }
     }
 }

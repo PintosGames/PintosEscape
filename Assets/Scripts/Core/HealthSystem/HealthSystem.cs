@@ -39,6 +39,14 @@ namespace Core.HealthSystem
             }
         }
 
+        public void Kill()
+        {
+            health = 0;
+            if (health == 0) CoreManager.GameOver();
+            GameObject.FindObjectOfType<AudioManager>().Play("Damage");
+            if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
+        }
+
         public void Heal()
         {
             if (health < maxHealth) health++;

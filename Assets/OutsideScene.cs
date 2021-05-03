@@ -6,6 +6,6 @@ public class OutsideScene : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player") Core.CoreManager.GameOver();
+        if (collision.gameObject.tag == "Player") Core.CoreManager.current.health.healthSystem.Kill();
     }
 }

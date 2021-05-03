@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1941536318}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!114 &1407226658
@@ -556,13 +556,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  inGame: 1
+  inGame: 0
   gameOverAnimator: {fileID: 1114367152}
   discord: {fileID: 5586319149985638734}
   save: {fileID: 1001190711578272200}
   scene: {fileID: 7022044575241350586}
   health: {fileID: 2396357688429791465}
   dialogue: {fileID: 3269817355634931611}
+  presence:
+    details: Exploring The Sink
+    state: 
+    startTime:
+      timestamp: 0
+    endTime:
+      timestamp: 0
+    smallAsset:
+      image: 
+      tooltip: 
+      snowflake: 0
+    largeAsset:
+      image: icon
+      tooltip: Pinto's Escape
+      snowflake: 0
+    firstButton:
+      label: Itch.io
+      url: https://tarsier.itch.io/pintos-escape
+    secondButton:
+      label: GitHub
+      url: https://github.com/SchoolHours/paint-jam-2021
+    party:
+      identifer: 
+      size: 0
+      maxSize: 0
+    secrets:
+      joinSecret: 
+      spectateSecret: 
 --- !u!114 &2396357688429791465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,7 +598,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001190711578272201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0973fd4385dec40862c8388d50a167, type: 3}
   m_Name: 
@@ -612,49 +640,49 @@ MonoBehaviour:
   - name: Start
     buildIndex: 0
     gameScene: 0
-    details: Exploring The Sink
+    details: In Start Menu
     state: 
     largeKey: 
     largeText: 
   - name: BeginningCutscene
     buildIndex: 1
     gameScene: 0
-    details: Exploring BeginningCutscene
+    details: In Cutscene
     state: 
     largeKey: 
     largeText: 
   - name: The Sink
     buildIndex: 2
     gameScene: 1
-    details: Exploring The Sink
+    details: Rescuing Java
     state: 
     largeKey: 
     largeText: 
   - name: TheCabinet
     buildIndex: 3
     gameScene: 1
-    details: Exploring TheCabinet
+    details: Rescuing Kidney
     state: 
     largeKey: 
     largeText: 
   - name: The Grill
     buildIndex: 4
     gameScene: 1
-    details: Exploring The Grill
+    details: Rescuing Navy
     state: 
     largeKey: 
     largeText: 
   - name: Endscene
     buildIndex: 5
     gameScene: 0
-    details: Exploring Endscene
+    details: In Cutscene
     state: 
     largeKey: 
     largeText: 
   - name: Credits
     buildIndex: 6
     gameScene: 0
-    details: Exploring Credits
+    details: Chillin in Credits
     state: 
     largeKey: 
     largeText: 
@@ -686,7 +714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c0662f7bb58e7439856b9fa8414d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationID: 424087019149328395
+  applicationID: 838733054674862180
   steamID: 
   targetPipe: -1
   logLevel: 3

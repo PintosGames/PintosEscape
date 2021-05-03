@@ -74,7 +74,7 @@ public class DiscordManager : MonoBehaviour
 	/// </summary>
 	public DiscordEvent CurrentSubscription { get { return _currentSubscription; } }
 	[Tooltip("The current subscription flag")]
-	[SerializeField] private DiscordEvent _currentSubscription = DiscordEvent.None;
+	[SerializeField] private DiscordEvent _currentSubscription = DiscordEvent.None; 
 
 	/// <summary>
 	/// The current presence displayed on the Discord Client.

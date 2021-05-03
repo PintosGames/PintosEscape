@@ -26,6 +26,10 @@ namespace Core
         public HealthManager health;
         public DialogueManager dialogue;
 
+        [Header("DiscordRP")]
+        public DiscordPresence presence;
+
+
         void Awake()
         {
             if (current == null)
@@ -46,6 +50,8 @@ namespace Core
                 current.inGame = true;
                 current.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
             }
+
+            UpdatePresence();
         }
 
         #region FUF
@@ -62,6 +68,20 @@ namespace Core
         public static void GameOver()
         {
             current.gameOverAnimator.SetBool("open", true);
+        }
+
+        public static void UpdatePresence()
+        {
+            string state;
+            if (current.scene.scenes[current.scene.currentBuildIndex].gameScene == true) state = current.health.healthSystem.health + " hearts left";
+            else state = null;
+
+            var presence = current.presence;
+
+            presence.details = current.scene.scenes[current.scene.currentBuildIndex].details;
+            presence.state = state;
+
+            current.discord.SetPresence(presence);
         }
 
         #endregion

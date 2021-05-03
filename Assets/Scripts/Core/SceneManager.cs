@@ -57,6 +57,8 @@ namespace Core
             } 
             else CoreManager.current.inGame = false;
 
+            CoreManager.UpdatePresence();
+
             sm.SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         }
 
