@@ -15,7 +15,7 @@ MonoBehaviour:
   maxHealth: 3
   damageCooldown: 3
   knockbackPower: 250
-  movementVelocity: 10
+  movementVelocity: 8
   jumpVelocity: 21
   amountOfJumps: 1
   coyoteTime: 0.2
