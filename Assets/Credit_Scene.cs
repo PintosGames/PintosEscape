@@ -16,6 +16,6 @@ public class Credit_Scene : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed / 15);
-        if (transform.position == target.position) Core.SceneManager.LoadScene(0);;
+        if (transform.position == target.position) Core.SceneManager.LoadNextScene();
     }
 }

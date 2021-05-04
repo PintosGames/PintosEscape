@@ -80,6 +80,10 @@ namespace Core
             {
                 FindObjectOfType<AudioManager>().Play("Credits");
             }
+            else if (scene.currentBuildIndex == 7)
+            {
+                FindObjectOfType<AudioManager>().Play("Menu");
+            }
         }
 
         #region FUF
