@@ -6,6 +6,6 @@ public class Endscene : MonoBehaviour
 {
     public void LoadCredits()
     {
-        Core.SceneManager.LoadScene(6);
+        Core.SceneManager.LoadNextScene();
     }
 }
