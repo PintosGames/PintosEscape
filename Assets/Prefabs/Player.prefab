@@ -215,6 +215,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 602c59ca-5b65-4149-9d17-09632631ddfc
     m_ActionName: Gameplay/Interact[/Keyboard/k]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7185601164874403514}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnRestartInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7dd5ba26-84df-476a-92ad-bd382a8b2b72
+    m_ActionName: Gameplay/Restart[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

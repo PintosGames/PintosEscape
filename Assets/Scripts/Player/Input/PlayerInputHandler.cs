@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Core;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -57,6 +58,14 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.canceled)
         {
             InteractInput = false;
+        }
+    }
+
+    public void OnRestartInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            SceneManager.ReloadScene();
         }
     }
 
