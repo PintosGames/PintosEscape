@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   maxHealth: 3
-  damageCooldown: 3
+  damageCooldown: 1
   knockbackPower: 250
   movementVelocity: 8
-  jumpVelocity: 21
+  jumpVelocity: 22
   amountOfJumps: 1
   coyoteTime: 0.2
-  variableJumpHeightMultiplier: 0.5
+  variableJumpHeightMultiplier: 0.3
   groundCheckRadius: 0.2
   whatIsGround:
     serializedVersion: 2

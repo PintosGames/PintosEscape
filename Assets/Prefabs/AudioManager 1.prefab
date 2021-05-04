@@ -70,8 +70,8 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: 7a840f4023235f749bac0fa963a3abac, type: 3}
-    volume: 1
-    pitch: 1
+    volume: 0.5
+    pitch: 1.5
     loop: 0
     source: {fileID: 0}
   - name: Damage
@@ -92,3 +92,4 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  setToPrimary: 0

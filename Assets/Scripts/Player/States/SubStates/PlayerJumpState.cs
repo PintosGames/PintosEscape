@@ -20,6 +20,8 @@ public class PlayerJumpState : PlayerAbilityState
         isAbilityDone = true;
         amountOfJumpsLeft--;
         player.InAirState.SetIsJumping();
+
+        GameObject.FindObjectOfType<AudioManager>().Play("Jump");
     }
 
     public bool CanJump()
