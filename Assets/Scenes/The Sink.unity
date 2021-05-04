@@ -351,6 +351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6840853545342038604, guid: 6b2cb8b4469685e48b9e9a7c45c3dbfa,
+        type: 3}
+      propertyPath: setToPrimary
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7904583751915418279, guid: 6b2cb8b4469685e48b9e9a7c45c3dbfa,
         type: 3}
       propertyPath: m_RootOrder
@@ -1216,7 +1221,6 @@ GameObject:
   - component: {fileID: 2096493474}
   - component: {fileID: 2096493476}
   - component: {fileID: 2096493478}
-  - component: {fileID: 2096493477}
   m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
@@ -2509,207 +2513,10 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
---- !u!66 &2096493477
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096493472}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 2096493476}
-    m_ColliderPaths:
-    - - X: 50000000
-        Y: -10700001
-      - X: 49200000
-        Y: -10000000
-      - X: -9400001
-        Y: -10000000
-      - X: -10000000
-        Y: -10200000
-      - X: -10000000
-        Y: 49999900
-      - X: -10000041
-        Y: 49999900
-      - X: -10000100
-        Y: 49999959
-      - X: -10000100
-        Y: 60000000
-      - X: -20000000
-        Y: 60000000
-      - X: -20000000
-        Y: -30000000
-      - X: 50000000
-        Y: -30000000
-    - - X: 410000000
-        Y: -20000000
-      - X: 400000000
-        Y: -20000000
-      - X: 400000000
-        Y: 60000000
-      - X: 390000100
-        Y: 60000000
-      - X: 390000100
-        Y: 49999959
-      - X: 390000041
-        Y: 49999900
-      - X: 390000000
-        Y: 49999900
-      - X: 390000000
-        Y: -10000000
-      - X: 340600000
-        Y: -10000000
-      - X: 340000000
-        Y: -10200000
-      - X: 340000000
-        Y: -30000000
-      - X: 410000000
-        Y: -30000000
-    - - X: 320000000
-        Y: 19300000
-      - X: 319200000
-        Y: 20000000
-      - X: 300000100
-        Y: 20000000
-      - X: 300000100
-        Y: 20000041
-      - X: 300000041
-        Y: 20000100
-      - X: 289999959
-        Y: 20000100
-      - X: 289999900
-        Y: 20000041
-      - X: 289999900
-        Y: 10399973
-      - X: 289999927
-        Y: 10399927
-      - X: 290699962
-        Y: 9999907
-      - X: 290699987
-        Y: 9999900
-      - X: 300000000
-        Y: 9999900
-      - X: 300000000
-        Y: -10000000
-      - X: 290600000
-        Y: -10000000
-      - X: 290000000
-        Y: -10200000
-      - X: 290000000
-        Y: -30000000
-      - X: 320000000
-        Y: -30000000
-    - - X: 180000000
-        Y: -10700001
-      - X: 179200000
-        Y: -10000000
-      - X: 170000000
-        Y: -10000000
-      - X: 170000000
-        Y: 19300000
-      - X: 169200000
-        Y: 20000000
-      - X: 150600000
-        Y: 20000000
-      - X: 150000000
-        Y: 19800000
-      - X: 150000000
-        Y: -20000000
-      - X: 130000000
-        Y: -20000000
-      - X: 130000000
-        Y: -10700001
-      - X: 129200000
-        Y: -10000000
-      - X: 110600008
-        Y: -10000000
-      - X: 110000000
-        Y: -10200000
-      - X: 110000000
-        Y: -30000000
-      - X: 180000000
-        Y: -30000000
-    - - X: 390000100
-        Y: -60000041
-      - X: 390000100
-        Y: -49999959
-      - X: 390000041
-        Y: -49999900
-      - X: -41
-        Y: -49999900
-      - X: -100
-        Y: -49999959
-      - X: -100
-        Y: -60000041
-      - X: -41
-        Y: -60000100
-      - X: 390000041
-        Y: -60000100
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 40.999973, y: -3}
-      - {x: 40.999973, y: -2}
-      - {x: 40, y: -1.9999707}
-      - {x: 39.999973, y: 6}
-      - {x: 39.00001, y: 5.999971}
-      - {x: 38.999973, y: -1}
-      - {x: 34.059998, y: -1.0000013}
-      - {x: 34, y: -1.02002}
-      - {x: 34.00003, y: -3}
-    - - {x: 4.999971, y: -3}
-      - {x: 4.9999914, y: -1.0699923}
-      - {x: 4.9199905, y: -1}
-      - {x: -0.94000393, y: -1.0000013}
-      - {x: -1, y: -1.0199564}
-      - {x: -1.0000393, y: 6}
-      - {x: -2, y: 5.999971}
-      - {x: -1.9999708, y: -3}
-    - - {x: 31.999971, y: -3}
-      - {x: 31.99999, y: 1.9300076}
-      - {x: 31.91999, y: 2}
-      - {x: 28.99999, y: 1.9999748}
-      - {x: 29.000008, y: 1.0399851}
-      - {x: 29.070007, y: 0.99999}
-      - {x: 30, y: 0.9999606}
-      - {x: 29.999971, y: -1}
-      - {x: 29.059998, y: -1.0000013}
-      - {x: 29, y: -1.02002}
-      - {x: 29.000029, y: -3}
-    - - {x: 17.999971, y: -3}
-      - {x: 17.99999, y: -1.0699923}
-      - {x: 17.91999, y: -1}
-      - {x: 17, y: -0.9999706}
-      - {x: 16.99999, y: 1.9300076}
-      - {x: 16.91999, y: 2}
-      - {x: 15.059997, y: 1.9999988}
-      - {x: 15, y: 1.97998}
-      - {x: 14.999971, y: -2}
-      - {x: 13, y: -1.9999707}
-      - {x: 12.999991, y: -1.0699923}
-      - {x: 12.919991, y: -1}
-      - {x: 11.059997, y: -1.0000013}
-      - {x: 11, y: -1.02002}
-      - {x: 11.00003, y: -3}
-    - - {x: 38.999973, y: -6.00001}
-      - {x: 38.999973, y: -4.99999}
-      - {x: -0.00001, y: -5.0000253}
-      - {x: 0.0000252, y: -6.00001}
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.2
 --- !u!50 &2096493478
 Rigidbody2D:
   serializedVersion: 4
@@ -2729,7 +2536,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: d62eb6604e3d0b34ab536c2cb41a5492, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!4 &2135756129 stripped
 Transform:
@@ -3048,7 +2855,7 @@ PrefabInstance:
     - target: {fileID: 7121055706437533112, guid: 63bb3084cc14ecb4fa1949658045809f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.113762
+      value: 6.108073
       objectReference: {fileID: 0}
     - target: {fileID: 7121055706437533112, guid: 63bb3084cc14ecb4fa1949658045809f,
         type: 3}

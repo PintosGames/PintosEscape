@@ -1,29 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using System;
 
 public class AudioManager : MonoBehaviour
 {
+    public event EventHandler onSoundsLoaded;
+
     public Sound[] sounds;
 
-    public static AudioManager instance;
+    public bool setToPrimary;
 
-    void Awake()
+    void OnEnable()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        DontDestroyOnLoad(gameObject);
-
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -33,6 +24,8 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+        onSoundsLoaded(this, EventArgs.Empty);
+        Debug.LogError("Sounds are loaded");
     }
 
     public void Play(string name)
@@ -43,6 +36,7 @@ public class AudioManager : MonoBehaviour
         {
             return;
         }
+        Debug.Log(s);
         s.source.Play();
     }
     public void Stop(string name)

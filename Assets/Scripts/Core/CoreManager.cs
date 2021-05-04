@@ -30,8 +30,10 @@ namespace Core
         public DiscordPresence presence;
 
 
-        void Awake()
+    void Awake()
         {
+            FindObjectOfType<AudioManager>().onSoundsLoaded += SoundsLoaded;
+
             if (current == null)
             {
                 current = this;
@@ -52,6 +54,32 @@ namespace Core
             }
 
             UpdatePresence();
+        }
+
+        private void SoundsLoaded(object sender, System.EventArgs e)
+        {
+            Debug.Log("sounds are loaded");
+
+            if (scene.currentBuildIndex == 2)
+            {
+                FindObjectOfType<AudioManager>().Play("Song2");
+            }
+            else if (scene.currentBuildIndex == 3)
+            {
+                FindObjectOfType<AudioManager>().Play("Song1");
+            }
+            else if (scene.currentBuildIndex == 4)
+            {
+                FindObjectOfType<AudioManager>().Play("Song2");
+            }
+            else if (scene.currentBuildIndex == 5)
+            {
+                FindObjectOfType<AudioManager>().Play("Song1");
+            }
+            else if (scene.currentBuildIndex == 6)
+            {
+                FindObjectOfType<AudioManager>().Play("Credits");
+            }
         }
 
         #region FUF
