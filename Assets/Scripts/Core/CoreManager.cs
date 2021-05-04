@@ -88,9 +88,12 @@ namespace Core
         public static void HealPlayer() => current.health.healthSystem.Heal();
         public static void KnockbackPlayer(int enemyFacingDirection)
         {
-            var player = current.player;
-            if (player.FacingDirection != enemyFacingDirection) player.RB.AddForce(new Vector2(-player.playerData.knockbackPower * player.FacingDirection, player.playerData.knockbackPower));
-            if (player.FacingDirection == enemyFacingDirection) player.RB.AddForce(new Vector2(player.playerData.knockbackPower * player.FacingDirection, player.playerData.knockbackPower));
+            if (current.health.healthSystem.health != 0)
+            {
+                var player = current.player;
+                if (player.FacingDirection != enemyFacingDirection) player.RB.AddForce(new Vector2(-player.playerData.knockbackPower * player.FacingDirection, player.playerData.knockbackPower));
+                if (player.FacingDirection == enemyFacingDirection) player.RB.AddForce(new Vector2(player.playerData.knockbackPower * player.FacingDirection, player.playerData.knockbackPower));
+            }
         }
 
         public static void GameOver()

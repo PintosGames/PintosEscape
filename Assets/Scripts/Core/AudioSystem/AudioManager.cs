@@ -36,7 +36,6 @@ public class AudioManager : MonoBehaviour
         {
             return;
         }
-        Debug.Log(s);
         s.source.Play();
     }
     public void Stop(string name)

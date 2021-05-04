@@ -32,11 +32,25 @@ namespace Core.HealthSystem
             if (Time.time > lastDamage + damageCooldown)
             {
                 if (health > 0) health--;
-                if (health == 0) CoreManager.GameOver();
                 if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
+                if (health == 0)
+                {
+                    Die();
+                    return;
+                }
                 lastDamage = Time.time;
                 CoreManager.current.player.gameObject.layer = LayerMask.NameToLayer("Damaged");
             }
+        }
+
+        public void Die()
+        {
+            var player = CoreManager.current.player;
+
+            player.StateMachine.ChangeState(player.DeadState);
+            player.RB.AddForce(new Vector2(0, CoreManager.current.player.playerData.knockbackPower * 3));
+            player.gameObject.layer = LayerMask.NameToLayer("Dead");
+            Debug.Log("ded");
         }
 
         public void Kill()
