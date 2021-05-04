@@ -17,6 +17,8 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.Enter();
         player.SetVelocityX(0f);
+        player.RB.isKinematic = true;
+        player.RB.isKinematic = false;
     }
 
     public override void Exit()
