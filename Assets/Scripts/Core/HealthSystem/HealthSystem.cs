@@ -29,6 +29,8 @@ namespace Core.HealthSystem
 
         public void Damage()
         {
+            CoreManager.current.player.SetVelocityX(0);
+            CoreManager.current.player.SetVelocityY(0);
             if (Time.time > lastDamage + damageCooldown)
             {
                 if (health > 0) health--;
@@ -39,6 +41,7 @@ namespace Core.HealthSystem
                     return;
                 }
                 lastDamage = Time.time;
+                CoreManager.current.player.StateMachine.ChangeState(CoreManager.current.player.HurtState);
                 CoreManager.current.player.gameObject.layer = LayerMask.NameToLayer("Damaged");
             }
         }
@@ -50,7 +53,6 @@ namespace Core.HealthSystem
             player.StateMachine.ChangeState(player.DeadState);
             player.RB.AddForce(new Vector2(0, CoreManager.current.player.playerData.knockbackPower * 3));
             player.gameObject.layer = LayerMask.NameToLayer("Dead");
-            Debug.Log("ded");
         }
 
         public void Kill()
