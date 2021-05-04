@@ -287,7 +287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed77a1e6e6c9434c937b254b06f6ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
 --- !u!1 &1407226656
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  inGame: 0
+  inGame: 1
   gameOverAnimator: {fileID: 1114367152}
   discord: {fileID: 5586319149985638734}
   save: {fileID: 1001190711578272200}
@@ -564,8 +563,8 @@ MonoBehaviour:
   health: {fileID: 2396357688429791465}
   dialogue: {fileID: 3269817355634931611}
   presence:
-    details: Exploring The Sink
-    state: 
+    details: Rescuing Kidney
+    state: 0 hearts left
     startTime:
       timestamp: 0
     endTime:
@@ -598,7 +597,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001190711578272201}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0973fd4385dec40862c8388d50a167, type: 3}
   m_Name: 
@@ -635,7 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c809c8536ada5a44db2e139905559bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBuildIndex: 0
+  currentBuildIndex: 3
   scenes:
   - name: Start
     buildIndex: 0
@@ -922,7 +921,7 @@ RectTransform:
   m_GameObject: {fileID: 3211943329533651771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 3211943329804249066}
   m_RootOrder: 1
@@ -1055,7 +1054,7 @@ RectTransform:
   m_GameObject: {fileID: 3211943329876989729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 3211943329804249066}
   m_RootOrder: 0
