@@ -12,6 +12,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool JumpInput { get; private set; }
     public bool JumpInputStop { get; private set; }
     public bool InteractInput;
+    public bool PauseInput;
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -66,6 +67,26 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.started)
         {
             SceneManager.ReloadScene();
+        }
+    }
+
+    public void OnPauseInput(InputAction.CallbackContext context)
+    {
+        if (context.started && !PauseManager.isPaused && !PauseInput)
+        {
+            PauseInput = true;
+            CoreManager.current.pause.Pause();
+            Debug.Log("pause");
+        }
+        if (context.started && PauseManager.isPaused && !PauseInput)
+        {
+            PauseInput = true;
+            CoreManager.current.pause.Resume();
+            Debug.Log("resume");
+        }
+        if (context.canceled)
+        {
+            PauseInput = false;
         }
     }
 

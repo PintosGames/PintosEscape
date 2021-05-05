@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
 
     public void UpdateTime()
     {
-        if (CoreManager.current.scene.scenes[CoreManager.current.scene.currentBuildIndex].gameScene)
+        if (CoreManager.current.scene.scenes[CoreManager.current.scene.currentBuildIndex].gameScene && !PauseManager.isPaused)
         {
             timeText.gameObject.SetActive(true);
 

@@ -522,21 +522,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Core
       objectReference: {fileID: 0}
-    - target: {fileID: 1001190711578272206, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
-        type: 3}
-      propertyPath: inGame
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1001190711578272206, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
-        type: 3}
-      propertyPath: presence.state
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1001190711578272206, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
-        type: 3}
-      propertyPath: presence.details
-      value: In Start Menu
-      objectReference: {fileID: 0}
     - target: {fileID: 1001190711578272207, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
         type: 3}
       propertyPath: m_RootOrder
@@ -592,11 +577,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2396357688429791465, guid: c8f8b5893d5e2144ea9759cd6b7b928d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8f8b5893d5e2144ea9759cd6b7b928d, type: 3}
 --- !u!1001 &1707983975
@@ -609,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 7121055706437533112, guid: 63bb3084cc14ecb4fa1949658045809f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.89193
+      value: 31.88468
       objectReference: {fileID: 0}
     - target: {fileID: 7121055706754303180, guid: 63bb3084cc14ecb4fa1949658045809f,
         type: 3}

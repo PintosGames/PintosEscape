@@ -26,6 +26,8 @@ namespace Core
         public HealthManager health;
         public DialogueManager dialogue;
 
+        public PauseManager pause;
+
         [Header("DiscordRP")]
         public DiscordPresence presence;
 

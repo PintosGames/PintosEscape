@@ -11,7 +11,6 @@ public class Score : MonoBehaviour
     void Start()
     {
         timeText.text = Timer.GetTimerTime();
-        Debug.Log(Timer.GetTimerTime());
     }
 
     public void Restart()
