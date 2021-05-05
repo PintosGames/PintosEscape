@@ -14,33 +14,53 @@ namespace Core
         public GameObject gameOver;
         public Button pauseButton;
 
+        public Sprite resume;
+        public Sprite pause;
+
         public void Pause()
         {
-            timeText.text = Timer.GetTimerTime();
-            pauseMenu.SetActive(true);
-            isPaused = true;
-            Time.timeScale = 0f;
+            if (!isPaused)
+            {
+                pauseMenu.SetActive(true);
+                timeText.text = Timer.GetTimerTime();
+                isPaused = true;
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Resume();
+            }
         }
 
         public void Resume()
         {
-            pauseMenu.SetActive(false);
             isPaused = false;
             Time.timeScale = 1f;
+            pauseMenu.SetActive(false);
         }
 
         public void BackToMenu()
         {
-            pauseMenu.SetActive(false);
             isPaused = false;
             FindObjectOfType<Timer>().timeValue = 0;
             Time.timeScale = 1f;
+            SceneManager.LoadScene(1);
+            pauseMenu.SetActive(false);
+        }
+
+        public void Restart()
+        {
+            isPaused = false;
+            FindObjectOfType<Timer>().timeValue = 0;
+            Time.timeScale = 1f;
+            SceneManager.ReloadScene();
+            pauseMenu.SetActive(false);
         }
 
         private void Update()
         {
-            if (pauseMenu.activeInHierarchy || gameOver.activeInHierarchy) pauseButton.gameObject.SetActive(false);
-            else pauseButton.gameObject.SetActive(true);
+            if (!pauseMenu.activeInHierarchy || !gameOver.activeInHierarchy) pauseButton.image.sprite = pause;
+            else pauseButton.image.sprite = resume;
         }
     }
 
