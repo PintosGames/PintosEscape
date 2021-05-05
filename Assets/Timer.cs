@@ -42,7 +42,7 @@ public class Timer : MonoBehaviour
 
     public static string GetTimerTime()
     {
-        float minutes = Mathf.RoundToInt(current.timeValue / 60);
+        float minutes = Mathf.Floor(current.timeValue / 60);
         float seconds = Mathf.RoundToInt(current.timeValue % 60);
         float milliseconds = current.timeValue % 1 * 1000;
 
