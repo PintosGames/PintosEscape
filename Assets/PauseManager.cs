@@ -44,7 +44,7 @@ namespace Core
             isPaused = false;
             FindObjectOfType<Timer>().timeValue = 0;
             Time.timeScale = 1f;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
             pauseMenu.SetActive(false);
         }
 
