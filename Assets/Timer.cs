@@ -51,4 +51,16 @@ public class Timer : MonoBehaviour
 
         return time;
     }
+
+    public static int[] GetTimeInInt()
+    {
+        var time = new int[]
+        {
+            (int) Mathf.Floor(current.timeValue / 60),
+            Mathf.RoundToInt(current.timeValue % 60),
+            (int) current.timeValue % 1 * 1000
+        };
+
+        return time;
+    }
 }
