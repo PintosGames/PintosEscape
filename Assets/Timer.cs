@@ -49,18 +49,13 @@ public class Timer : MonoBehaviour
         string time = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
         time = time.Remove(time.Length - 1, 1);
 
-        return time;
-    }
+        int checkTimeValue = (int) ((minutes * 3) + (seconds * 1) + (milliseconds * 3));
+        checkTimeValue = (int) (Mathf.Ceil(checkTimeValue / 10) * 10) - checkTimeValue;
 
-    public static int[] GetTimeInInt()
-    {
-        var time = new int[]
-        {
-            (int) Mathf.Floor(current.timeValue / 60),
-            Mathf.RoundToInt(current.timeValue % 60),
-            (int) current.timeValue % 1 * 1000
-        };
+        if (checkTimeValue < 0) checkTimeValue *= -1;
 
-        return time;
+        Debug.LogError("GG");
+
+        return time + "<size=10>" + checkTimeValue + "</size>";
     }
 }

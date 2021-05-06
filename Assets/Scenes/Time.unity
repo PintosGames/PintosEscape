@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1919913348}
+  timeCheck: {fileID: 0}
 --- !u!114 &469479033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,7 +757,7 @@ GameObject:
   - component: {fileID: 1919913349}
   - component: {fileID: 1919913348}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
