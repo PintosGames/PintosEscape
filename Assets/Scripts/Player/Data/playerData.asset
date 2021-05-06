@@ -16,7 +16,7 @@ MonoBehaviour:
   damageCooldown: 1
   knockbackPower: 250
   movementVelocity: 8
-  jumpVelocity: 21
+  jumpVelocity: 17
   amountOfJumps: 1
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.3
