@@ -42,12 +42,24 @@ public class Timer : MonoBehaviour
 
     public static string GetTimerTime()
     {
-        float minutes = Mathf.RoundToInt(current.timeValue / 60);
+        float minutes = Mathf.Floor(current.timeValue / 60);
         float seconds = Mathf.RoundToInt(current.timeValue % 60);
         float milliseconds = current.timeValue % 1 * 1000;
 
         string time = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
         time = time.Remove(time.Length - 1, 1);
+
+        return time;
+    }
+
+    public static int[] GetTimeInInt()
+    {
+        var time = new int[]
+        {
+            (int) Mathf.Floor(current.timeValue / 60),
+            Mathf.RoundToInt(current.timeValue % 60),
+            (int) current.timeValue % 1 * 1000
+        };
 
         return time;
     }
