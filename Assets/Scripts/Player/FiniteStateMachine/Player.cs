@@ -82,6 +82,8 @@ public class Player : MonoBehaviour
         StateMachine.CurrentState.PhysicsUpdate();
 
         if (CheckIfGrounded()) jumped = 0;
+
+        CheckForGumbug();
     }
     #endregion
 
@@ -147,6 +149,16 @@ public class Player : MonoBehaviour
     {
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+
+    public void CheckForGumbug()
+    {
+        Collider2D info = Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGumbug);
+
+        if (info.GetComponent<Gumbug>() != null)
+        {
+            info.GetComponent<Gumbug>().Die();
+        }
     }
     #endregion
 

@@ -93,4 +93,9 @@ public class Gumbug : MonoBehaviour
         }
         Flip();
     }
+
+    public void Die()
+    {
+
+    }
 }

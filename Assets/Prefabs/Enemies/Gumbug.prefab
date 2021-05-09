@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: -2187316788822897448}
   m_Layer: 8
   m_Name: Gumbug
-  m_TagString: Untagged
+  m_TagString: Gumbug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
